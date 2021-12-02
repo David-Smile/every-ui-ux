@@ -1,4 +1,4 @@
-import 'package:every_interface/components/RoundedButton.dart';
+import 'package:every_interface/components/rounded_button.dart';
 import 'package:every_interface/constants.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -15,44 +15,49 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(left: 25, top: 75),
-            ),
-            Image.asset(
-              'assets/images/every.png',
-              height: 200,
-              width: 200,
-            ),
-            Text(
-              "every.",
-              style: TextStyle(
-                  color: kPrimaryColor,
-                  fontFamily: 'poppins',
-                  fontSize: 50,
-                  fontWeight: FontWeight.w800),
-            ),
-            Text(
-              "Your everyday personal assistant.",
-              style: TextStyle(
-                color: kTextColor,
-                fontFamily: 'poppins',
-                fontSize: 20,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 38.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                'assets/images/every.png',
+                height: 200,
+                width: 200,
               ),
-            ),
-            Padding(padding: EdgeInsets.only(top: 60)),
-            RoundedButton(
-              text: "Get Started",
-              press: () {},
-            ),
-            RoundedButton(
-              text: "Login",
-              press: () {},
-              color: Colors.white,
-              textColor: kPrimaryColor,
-            ),
-          ],
+              Text(
+                "every.",
+                style: TextStyle(
+                    color: kPrimaryColor,
+                    fontFamily: 'poppins',
+                    fontSize: 50,
+                    fontWeight: FontWeight.w800),
+              ),
+              SizedBox(height: 8.0),
+              Text(
+                "Your everyday personal assistant.",
+                style: TextStyle(
+                  color: kTextColor,
+                  fontFamily: 'poppins',
+                  fontSize: 18,
+                ),
+              ),
+              SizedBox(height: 108.0),
+              RoundedButton(
+                text: "Get Started",
+                press: () {},
+              ),
+              SizedBox(height: 16.0),
+              RoundedButton(
+                text: "Login",
+                press: () {},
+                color: Colors.white,
+                textColor: kPrimaryColor,
+              ),
+              SizedBox(height: 30.0),
+              ClickWidget()
+            ],
+          ),
         ),
       ),
     );
@@ -66,18 +71,22 @@ class ClickWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     TextStyle defaultStyle = TextStyle(
       color: kTextColor,
-      fontSize: 20.0,
+      fontSize: 15.0,
     );
     TextStyle linkStyle = TextStyle(color: kPrimaryColor);
 
     return RichText(
-      text: TextSpan(style: defaultStyle, children: <TextSpan>[
-        TextSpan(text: 'New around here?'),
-        TextSpan(
-            text: 'Sign in',
+      text: TextSpan(
+        style: defaultStyle,
+        children: <TextSpan>[
+          TextSpan(text: 'New around here?'),
+          TextSpan(
+            text: ' Sign in',
             style: linkStyle,
-            recognizer: TapGestureRecognizer())
-      ]),
+            recognizer: TapGestureRecognizer()..onTap = () {},
+          ),
+        ],
+      ),
     );
   }
 }
