@@ -43,6 +43,7 @@ class _SigninState extends State<Signin> {
                 press: () {},
                 color: Colors.white,
                 textColor: Color(0xffCCCCCC),
+                image: kApple,
               ),
               SizedBox(
                 height: 16,
@@ -52,6 +53,7 @@ class _SigninState extends State<Signin> {
                 press: () {},
                 color: Colors.white,
                 textColor: Color(0xff4285F4),
+                image: kGoogle,
               ),
               SizedBox(
                 height: 40,

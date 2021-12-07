@@ -6,16 +6,15 @@ class SocialButton extends StatelessWidget {
   final String text;
   final Function press;
   final Color color, textColor;
-  final Image imagelogoapple, imagelogogoogle;
+  final String image;
 
   const SocialButton({
     Key? key,
     required this.text,
     required this.press,
-    this.imagelogoapple = kApple,
-    this.imagelogogoogle = kGoogle,
     this.color = kPrimaryColor,
     this.textColor = Colors.white,
+    this.image = kApple,
   }) : super(key: key);
 
   @override
@@ -42,6 +41,8 @@ class SocialButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset(image, height: 20.0, width: 20.0),
+              SizedBox(width: 10.0),
               Center(
                 child: Text(
                   text,
