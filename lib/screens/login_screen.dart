@@ -1,5 +1,6 @@
 import 'package:every_interface/components/rounded_button.dart';
 import 'package:every_interface/constants.dart';
+import 'package:every_interface/screens/sign_in_page.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -83,7 +84,13 @@ class ClickWidget extends StatelessWidget {
           TextSpan(
             text: ' Sign in',
             style: linkStyle,
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Signin()),
+                );
+              },
           ),
         ],
       ),

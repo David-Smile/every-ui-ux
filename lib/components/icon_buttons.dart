@@ -2,15 +2,18 @@ import 'package:every_interface/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class RoundedButton extends StatelessWidget {
+class SocialButton extends StatelessWidget {
   final String text;
   final Function press;
   final Color color, textColor;
+  final Image imagelogoapple, imagelogogoogle;
 
-  const RoundedButton({
+  const SocialButton({
     Key? key,
     required this.text,
     required this.press,
+    this.imagelogoapple = kApple,
+    this.imagelogogoogle = kGoogle,
     this.color = kPrimaryColor,
     this.textColor = Colors.white,
   }) : super(key: key);
@@ -36,15 +39,20 @@ class RoundedButton extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(24.0),
           onTap: () {},
-          child: Center(
-            child: Text(
-              text,
-              style: TextStyle(
-                color: textColor,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    color: textColor,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),
