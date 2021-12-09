@@ -70,6 +70,7 @@ class _SigninState extends State<Signin> {
               TextField(
                 decoration: InputDecoration(
                     fillColor: Colors.white,
+                    filled: true,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Colors.white,
