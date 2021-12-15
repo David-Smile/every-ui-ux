@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:every_interface/components/icon_buttons.dart';
 import 'package:every_interface/components/rounded_button.dart';
 import 'package:every_interface/constants.dart';
@@ -69,7 +67,6 @@ class _SigninState extends State<Signin> {
                 SizedBox(
                   height: 16,
                 ),
-
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -105,7 +102,6 @@ class _SigninState extends State<Signin> {
               ],
             ),
           ),
-
           Divider(
             color: Color(0xff2C2929).withOpacity(0.1),
           ),
